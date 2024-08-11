@@ -1,0 +1,149 @@
+  
+@-moz-document url(about:newtab), url(about:home) {
+    .outer-wrapper::before {
+        /* I don't know what I'm doing here but this works */
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* Adjust this to your needs. */
+		font-weight: light;
+        font-family: Nunito;
+        /*backdrop-filter: blur(15px) brightness(90%);*/
+    }
+
+    .outer-wrapper {
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        /* Change the below to your background path,
+		       or place your background image with file
+		       name "newTabBG.png" in the img folder in "chrome". */
+        background-image: url(img/newTabBG.png) !important;
+        background-position: 0% 0 !important;
+        transition: background-position 1s ease-in-out !important;
+		font-weight: light;
+        font-family: Nunito;
+    }
+
+    /* hacks */
+    :root[lwt-newtab-brighttext] {
+        --newtab-background-color: #fff0 !important;
+        --newtab-background-color-secondary: #ffffff00 !important;
+    }
+
+    :root {
+        --newtab-background-color: #fff0 !important;
+        --newtab-background-color-secondary: #fff0 !important;
+        --newtab-overlay-color: #fff0 !important;
+    }
+
+    /* salvage readability */
+    .section-title {
+        text-shadow: 1px 1px 1px #222;
+		font-size: 14px;
+        font-weight: light;
+		font-family: Nunito;
+    }
+
+    .personalize-button {
+        z-index: 1;
+        font-weight: light;
+        font-family: Nunito;
+    }
+
+    .card {
+        backdrop-filter: brightness(70%);
+        font-weight: light;
+        font-family: Nunito;
+    }
+
+    .modal-overlay {
+        backdrop-filter: blur(15px) brightness(80%);
+		font-weight: light;
+        font-family: Nunito;
+    }
+
+    .modal {
+        backdrop-filter: blur(15px) brightness(80%);
+		font-weight: light;
+        font-family: Nunito;
+    }
+    .section-empty-state {
+        backdrop-filter: brightness(80%);
+    }
+    
+    .top-site-outer .context-menu-button {
+        backdrop-filter: blur(15px);
+        font-weight: light;
+        font-family: Nunito;
+    }
+    .top-site-button .title {
+        font-weight: light;
+        font-family: Nunito;	
+	}
+    .card-outer {
+        border: 2px solid #ffffff1f;
+        font-weight: light;
+        font-family: Nunito;
+    }
+    
+    .top-site-outer .tile {
+        /*! background-color: var(--newtab-background-color-secondary); */
+        backdrop-filter: blur(15px) brightness(80%);
+        border: 2px solid #ffffff1f;
+
+        font-weight: light;
+        font-family: Nunito;
+    }
+
+    .customize-menu {
+        backdrop-filter: blur(15px) brightness(90%);
+		font-weight: light;
+        font-family: Nunito;
+    }
+
+    .modalOverlayOuter {
+        backdrop-filter: blur(15px) brightness(69%);
+		font-weight: light;
+        font-family: Nunito;
+    }
+
+    .context-menu {
+        /*! background: var(--newtab-background-color-secondary); */
+        z-index: 10;
+        backdrop-filter: blur(15px) brightness(90%);
+        font-weight: light;
+        font-family: Nunito;
+    }
+
+    .logo-and-wordmark {
+        width: 512px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        border: 2px solid #ffffff0f;
+        border-radius: 12px;
+        backdrop-filter: blur(32px);
+
+        padding-top: 50px;
+        padding-bottom: 50px;
+		font-weight: light;
+        font-family: Nunito;
+    }
+    .search-handoff-button {
+        display: none !important;
+		font-weight: light;
+        font-family: Nunito;
+    }
+
+    .click-target-container *,
+    .top-sites-list * {
+        color: #fff !important ;
+        text-shadow: 2px 2px 2px #222 !important ;
+        font-family: Nunito;
+    }
+}

@@ -1,0 +1,35 @@
+
+:root {
+  --conf-tab-size: 32px;
+  --conf-border-radius: 10px;
+  
+  --tab-min-height: var(--conf-tab-size) !important;
+  --tab-max-height: var(--conf-tab-size) !important;
+  
+  --toolbarbutton-border-radius: var(--conf-border-radius) !important;
+  --tab-border-radius: var(--conf-border-radius) !important;
+}
+
+.tab-icon-sound-label.tab-icon-sound-playing-label {
+  display: none;
+}
+
+.titlebar-spacer {
+  display: none;
+}
+
+.tab-text.tab-label {
+  font-size: 14px;
+  font-weight: bold;
+  font-family: Nunito;
+}
+
+* {
+  font-size: 14px;
+  font-weight: light;
+  font-family: Nunito;
+}
+
+#PersonalToolbar {
+  transition: 0.5s ease-in-out;
+}
